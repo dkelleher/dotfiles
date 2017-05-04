@@ -13,10 +13,11 @@ Plugin 'tyrannicaltoucan/vim-quantum'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'jamessan/vim-gnupg'
 Plugin 'ajh17/spacegray.vim'
-Bundle 'Valloric/YouCompleteMe'
+Plugin 'ajf/puppet-vim'
+" remove you complete me until powerline updates for interactive complete
+" Bundle 'Valloric/YouCompleteMe'
 
 call vundle#end()
-
 
 
 " Powerline activation
@@ -28,7 +29,6 @@ EOF
 
 set laststatus=2
 
-
 " python with virtualenv support
 python << EOF
 import os
@@ -39,19 +39,35 @@ if 'VIRTUAL_ENV' in os.environ:
   execfile(activate_this, dict(__file__=activate_this))
 EOF
 
-
 set encoding=utf-8
 set splitbelow
 set splitright
 
+" Setup fuzzy search and autochdir
+set autochdir
+set wildmenu
+
+" Don't offer to open certain files/directories
+set wildignore+=*.bmp,*.gif,*.ico,*.jpg,*.png,*.ico
+set wildignore+=*.pdf,*.psd
+
 let g:ycm_autoclose_preview_window_after_completion=1
 let python_highlight_all=1
+
+" Enable system clipboard
+set clipboard=unnamed
+
 
 " Map window movement to control 
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
+
+" General tabs because 8 is just to much
+set tabstop=4
+set softtabstop=4
+set expandtab
 
 " File specific settings
 au BufNewFile,BufRead *.py 
@@ -62,10 +78,32 @@ au BufNewFile,BufRead *.py
     \ set expandtab |
     \ set autoindent |
     \ set fileformat=unix |
-    \ set colorcolumn=80
+    \ set colorcolumn=80 |
+    \ set nu
 
 au BufNewFile,BufRead *.rst
     \ set textwidth=79
+
+au BufNewFile,BufRead *.yml,*.yaml
+    \ set tabstop=2 |
+    \ set softtabstop=2 |
+    \ set shiftwidth=2 |
+    \ set expandtab |
+    \ set autoindent |
+    \ set fileformat=unix
+
+au BufNewFile,BufRead COMMIT_EDITMSG
+    \ set textwidth=72 |
+    \ setlocal spell
+
+au BufNewFile,BufRead *.rb
+    \ set tabstop=2 |
+    \ set softtabstop=2 |
+    \ set shiftwidth=2 |
+    \ set expandtab |
+    \ set autoindent |
+    \ set fileformat=unix
+
 
 " Syntax highlighting
 syntax on

@@ -1,0 +1,18 @@
+[user]
+	email = dkelleher@g.harvard.edu
+	name = Dan Kelleher
+[push]
+	default = simple
+[core]
+	editor = vim
+[alias]
+    ec = config --global -e
+    co = checkout
+    up = !git pull --rebase --prune $@ && git submodule update --init --recursive
+    cob = checkout -b
+    save = !git add -A && git commit -m 'SAVEPOINT'
+    undo = reset HEAD~1 --mixed
+    amend = commit -a --amend
+    wipe = !git add -A && git commit -qm 'WIPE SAVEPOINT' && git reset HEAD~1 --hard
+    bclean = "!f() { git branch --merged ${1-master} | grep -v " ${1-master}$" | xargs git branch -d; }; f"
+    bdone = "!f() { git checkout ${1-master] && git up && git bclean ${1-master}; }; f"
