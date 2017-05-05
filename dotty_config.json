@@ -1,0 +1,14 @@
+{
+    "directories": [
+        "~/.vim.d"
+    ],
+
+    "link": {
+        "files/vimrc": "~/.vimrc"
+    },
+
+    "commands": [
+        "./scripts/git-first-clone.sh https://github.com/VundleVim/Vundle.vim.git ~/.vim.d/bundle/Vundle.vim",
+	"vim +PluginInstall +qall"
+    ]
+}

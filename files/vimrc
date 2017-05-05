@@ -1,0 +1,22 @@
+set nocompatible
+filetype off
+
+set rtp+=~/.vim.d/bundle/Vundle.vim
+call vundle#begin('~/.vim.d/bundle')
+
+Plugin 'VundleVim/Vundle.vim'
+
+Plugin 'chriskempson/base16-vim'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+
+call vundle#end()
+
+filetype on
+syntax on
+
+set laststatus=2
+
+let g:airline#extensions#tabline#enabled = 1
+
+let g:airline_theme="base16_default"
