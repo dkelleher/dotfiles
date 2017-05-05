@@ -4,7 +4,8 @@
     ],
 
     "link": {
-        "files/vimrc": "~/.vimrc"
+        "files/vimrc": "~/.vimrc",
+	"files/iterm2_profiles.json": "~/Library/Application Support/iTerm2/DynamicProfiles/iterm2_profiles.json"
     },
 
     "commands": [

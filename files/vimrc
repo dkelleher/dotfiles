@@ -1,4 +1,8 @@
 set nocompatible
+
+""""""""""""""""
+" Setup Vundle "
+""""""""""""""""
 filetype off
 
 set rtp+=~/.vim.d/bundle/Vundle.vim
@@ -6,7 +10,7 @@ call vundle#begin('~/.vim.d/bundle')
 
 Plugin 'VundleVim/Vundle.vim'
 
-Plugin 'chriskempson/base16-vim'
+Plugin 'ayu-theme/ayu-vim'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 
@@ -15,8 +19,16 @@ call vundle#end()
 filetype on
 syntax on
 
+"""""""""""""""""""""""""""""""""""""
+" Setup airline top and bottom bars "
+"""""""""""""""""""""""""""""""""""""
 set laststatus=2
-
 let g:airline#extensions#tabline#enabled = 1
 
-let g:airline_theme="base16_default"
+"""""""""""""""""""
+" Setup vim theme "
+"""""""""""""""""""
+set termguicolors     " enable true colors support
+let ayucolor="mirage" " for mirage version of theme
+colorscheme ayu
+let g:airline_theme='luna'
