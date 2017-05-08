@@ -4,12 +4,15 @@
     ],
 
     "link": {
+        "files/zshrc": "~/.zshrc",
         "files/vimrc": "~/.vimrc",
+        "files/tmux.conf": "~/.tmux.conf",
 	"files/iterm2_profiles.json": "~/Library/Application Support/iTerm2/DynamicProfiles/iterm2_profiles.json"
     },
 
     "commands": [
         "./scripts/git-first-clone.sh https://github.com/VundleVim/Vundle.vim.git ~/.vim.d/bundle/Vundle.vim",
+	"./scripts/git-first-clone.sh https://github.com/zsh-users/antigen.git ~/.antigen ~/.antigen",
 	"vim +PluginInstall +qall"
     ]
 }

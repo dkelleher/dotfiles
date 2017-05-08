@@ -10,7 +10,7 @@ if [ ! -d $LOCALREPO_VC_DIR ]
 then
     git clone $REPOSRC $LOCALREPO
 else
-    echo "$LOCALREPO already exists"
+    echo "Skipping existing git clone $REPOSRC $LOCALREPO"
 fi
 
 # End
