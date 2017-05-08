@@ -32,3 +32,10 @@ set termguicolors     " enable true colors support
 let ayucolor="mirage" " for mirage version of theme
 colorscheme ayu
 let g:airline_theme='luna'
+
+""""""""""""""""""""""""
+" File specific config "
+""""""""""""""""""""""""
+au BufNewFile,BufRead COMMIT_EDITMSG
+    \ set textwidth=72 |
+    \ setlocal spell
