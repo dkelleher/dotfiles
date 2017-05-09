@@ -1,0 +1,26 @@
+
+HISTFILE="$HOME/.bash_history"
+HISTSIZE=1000000
+HISTFILESIZE=$HISTSIZE
+HISTCONTROL=ignorespace:ignoredups
+
+if [[ $EUID == 0 ]]; then NCOLOR="\e[31m"; else NCOLOR="\e[33m"; fi
+3PWD='${PWD#"${PWD%/*/*/*}/"}'
+
+export PS1='\['${NCOLOR}'\]\u\[\e[m\]::\[\e[34m\]'${3PWD}'\[\e[m\] >> '
+
+# Set append history
+_bash_history_sync() {
+  builtin history -a
+  HISTFILESIZE=$HISTSIZE
+  builtin history -c
+  builtin history -r
+}
+
+history() {
+  _bash_history_sync
+  builtin history "$@"
+}
+
+
+export PROMPT_COMMAND=_bash_history_sync
