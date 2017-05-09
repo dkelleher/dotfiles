@@ -1,0 +1,7 @@
+[user]
+	email = dkelleher@g.harvard.edu
+	name = Dan Kelleher
+[push]
+	default = simple
+[core]
+	editor = vim
