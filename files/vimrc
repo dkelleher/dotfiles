@@ -28,7 +28,9 @@ let g:airline#extensions#tabline#enabled = 1
 """""""""""""""""""
 " Setup vim theme "
 """""""""""""""""""
-set termguicolors     " enable true colors support
+if(has("termguicolors"))
+  set termguicolors     " enable true colors support
+endif
 let ayucolor="mirage" " for mirage version of theme
 colorscheme ayu
 let g:airline_theme='luna'

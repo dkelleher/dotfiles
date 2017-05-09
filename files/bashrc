@@ -5,9 +5,9 @@ HISTFILESIZE=$HISTSIZE
 HISTCONTROL=ignorespace:ignoredups
 
 if [[ $EUID == 0 ]]; then NCOLOR="\e[31m"; else NCOLOR="\e[33m"; fi
-3PWD='${PWD#"${PWD%/*/*/*}/"}'
+THREE_PWD='${PWD#"${PWD%/*/*/*}/"}'
 
-export PS1='\['${NCOLOR}'\]\u\[\e[m\]::\[\e[34m\]'${3PWD}'\[\e[m\] >> '
+export PS1='\['${NCOLOR}'\]\u\[\e[m\]::\[\e[34m\]'${THREE_PWD}'\[\e[m\] >> '
 
 # Set append history
 _bash_history_sync() {
@@ -24,3 +24,5 @@ history() {
 
 
 export PROMPT_COMMAND=_bash_history_sync
+
+alias sudo="PS1='\[\e[31m\]\u\[\e[m\]::\[\e[34m\]'${THREE_PWD}'\[\e[m\] >> ' sudo"
