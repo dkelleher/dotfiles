@@ -8,6 +8,7 @@ if [[ $EUID == 0 ]]; then NCOLOR="\e[31m"; else NCOLOR="\e[33m"; fi
 THREE_PWD='${PWD#"${PWD%/*/*/*}/"}'
 
 export PS1='\['${NCOLOR}'\]\u\[\e[m\]::\[\e[34m\]'${THREE_PWD}'\[\e[m\] >> '
+export ROOT_PS1='\[\e[31m\]\u\[\e[m\]::\[\e[34m\]'${THREE_PWD}'\[\e[m\] >> '
 
 # Set append history
 _bash_history_sync() {
@@ -25,4 +26,4 @@ history() {
 
 export PROMPT_COMMAND=_bash_history_sync
 
-alias sudo="PS1='\[\e[31m\]\u\[\e[m\]::\[\e[34m\]'${THREE_PWD}'\[\e[m\] >> ' sudo"
+alias sudo='PS1=${ROOT_PS1} sudo'
