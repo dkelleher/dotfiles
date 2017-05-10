@@ -31,7 +31,7 @@ filetype on
 syntax on
 set encoding=utf-8
 let g:better_whitespace_enabled = 1
-highlight ExtraWhitespace  gui=NONE,undercurl  guibg=NONE  cterm=NONE,undercurl  ctermbg=NONE  term=NONE,undercurl
+highlight ExtraWhitespace guifg=NONE guibg=#371F1C gui=underline ctermfg=NONE ctermbg=NONE cterm=underline
 
 """""""""""""""""""""""""""""""""""""
 " Setup airline top and bottom bars "
