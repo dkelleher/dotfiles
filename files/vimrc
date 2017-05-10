@@ -13,18 +13,9 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'ayu-theme/ayu-vim'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
+Plugin 'ntpeters/vim-better-whitespace'
 
 call vundle#end()
-
-filetype on
-syntax on
-set encoding=utf-8
-
-"""""""""""""""""""""""""""""""""""""
-" Setup airline top and bottom bars "
-"""""""""""""""""""""""""""""""""""""
-set laststatus=2
-let g:airline#extensions#tabline#enabled = 1
 
 """""""""""""""""""
 " Setup vim theme "
@@ -35,6 +26,18 @@ endif
 let ayucolor="mirage" " for mirage version of theme
 colorscheme ayu
 let g:airline_theme='luna'
+
+filetype on
+syntax on
+set encoding=utf-8
+let g:better_whitespace_enabled = 1
+highlight ExtraWhitespace  gui=NONE,undercurl  guibg=NONE  cterm=NONE,undercurl  ctermbg=NONE  term=NONE,undercurl
+
+"""""""""""""""""""""""""""""""""""""
+" Setup airline top and bottom bars "
+"""""""""""""""""""""""""""""""""""""
+set laststatus=2
+let g:airline#extensions#tabline#enabled = 1
 
 """"""""""""""""""""""""""
 " Set default tab length "
@@ -49,3 +52,12 @@ set expandtab
 au BufNewFile,BufRead COMMIT_EDITMSG
     \ set textwidth=72 |
     \ setlocal spell
+
+au BufNewFile,BufRead *.html
+    \ set tabstop=2 |
+    \ set softtabstop=2 |
+    \ set shiftwidth=2 |
+    \ set autoindent |
+    \ set fileformat=unix
+
+
