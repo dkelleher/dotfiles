@@ -18,6 +18,7 @@ call vundle#end()
 
 filetype on
 syntax on
+set encoding=utf-8
 
 """""""""""""""""""""""""""""""""""""
 " Setup airline top and bottom bars "
@@ -34,6 +35,13 @@ endif
 let ayucolor="mirage" " for mirage version of theme
 colorscheme ayu
 let g:airline_theme='luna'
+
+""""""""""""""""""""""""""
+" Set default tab length "
+""""""""""""""""""""""""""
+set tabstop=4
+set softtabstop=4
+set expandtab
 
 """"""""""""""""""""""""
 " File specific config "
