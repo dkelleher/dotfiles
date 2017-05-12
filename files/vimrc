@@ -14,6 +14,7 @@ Plugin 'ayu-theme/ayu-vim'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'ntpeters/vim-better-whitespace'
+Plugin 'kchmck/vim-coffee-script'
 
 call vundle#end()
 
@@ -53,11 +54,9 @@ au BufNewFile,BufRead COMMIT_EDITMSG
     \ set textwidth=72 |
     \ setlocal spell
 
-au BufNewFile,BufRead *.html
+au BufNewFile,BufRead *.html,*.js,*.yml,*.yaml
     \ set tabstop=2 |
     \ set softtabstop=2 |
     \ set shiftwidth=2 |
     \ set autoindent |
     \ set fileformat=unix
-
-
