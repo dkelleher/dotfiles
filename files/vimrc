@@ -15,6 +15,7 @@ Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'ntpeters/vim-better-whitespace'
 Plugin 'kchmck/vim-coffee-script'
+Plugin 'ajf/puppet-vim'
 
 call vundle#end()
 
@@ -54,7 +55,7 @@ au BufNewFile,BufRead COMMIT_EDITMSG
     \ set textwidth=72 |
     \ setlocal spell
 
-au BufNewFile,BufRead *.html,*.js,*.yml,*.yaml
+au BufNewFile,BufRead *.html,*.js,*.yml,*.yaml,*.rb,*pp
     \ set tabstop=2 |
     \ set softtabstop=2 |
     \ set shiftwidth=2 |
