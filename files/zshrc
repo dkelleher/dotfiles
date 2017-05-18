@@ -17,3 +17,7 @@ export PS1="%{$fg[$NCOLOR]%}%n%{$reset_color%}::%{$fg[blue]%}%3/%{$reset_color%}
 if [[ -a ~/.sh.d/venv ]]; then
     source ~/.sh.d/venv
 fi
+
+if [[ -a ~/.local.d/aliases.sh ]]; then
+    source ~/.local.d/aliases.sh
+fi

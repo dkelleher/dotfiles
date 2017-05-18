@@ -55,6 +55,10 @@ au BufNewFile,BufRead COMMIT_EDITMSG
     \ set textwidth=72 |
     \ setlocal spell
 
+au BufNewFile,BufRead *.rst,*.md
+    \ set textwidth=72 |
+    \ setlocal spell
+
 au BufNewFile,BufRead *.html,*.js,*.yml,*.yaml,*.rb,*pp
     \ set tabstop=2 |
     \ set softtabstop=2 |
