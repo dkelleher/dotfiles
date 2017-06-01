@@ -34,6 +34,7 @@ syntax on
 set encoding=utf-8
 let g:better_whitespace_enabled = 1
 highlight ExtraWhitespace guifg=NONE guibg=#371F1C gui=underline ctermfg=NONE ctermbg=NONE cterm=underline
+highlight ColorColumn ctermbg=0 guibg=lightgrey
 
 """""""""""""""""""""""""""""""""""""
 " Setup airline top and bottom bars "
@@ -64,4 +65,9 @@ au BufNewFile,BufRead *.html,*.js,*.yml,*.yaml,*.rb,*pp
     \ set softtabstop=2 |
     \ set shiftwidth=2 |
     \ set autoindent |
+    \ set fileformat=unix
+
+au BufNewFile,BufRead *.py
+    \ set autoindent |
+    \ set colorcolumn=80 |
     \ set fileformat=unix
