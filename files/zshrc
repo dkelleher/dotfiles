@@ -14,10 +14,6 @@ if [ $UID -eq 0 ]; then NCOLOR="red"; else NCOLOR="yellow"; fi
 
 export PS1="%{$fg[$NCOLOR]%}%n%{$reset_color%}::%{$fg[blue]%}%3/%{$reset_color%} >> "
 
-if [[ -a ~/.sh.d/venv ]]; then
-    source ~/.sh.d/venv
-fi
-
-if [[ -a ~/.local.d/aliases.sh ]]; then
-    source ~/.local.d/aliases.sh
-fi
+for file ($HOME/.sh.d/*.sh(N)); do
+    source $file
+done
