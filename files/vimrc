@@ -29,6 +29,9 @@ let ayucolor="mirage" " for mirage version of theme
 colorscheme ayu
 let g:airline_theme='luna'
 
+let g:airline_powerline_fonts=1
+let g:Powerline_symbols='unicode'
+
 filetype on
 syntax on
 set encoding=utf-8
@@ -70,5 +73,8 @@ au BufNewFile,BufRead *.html,*.js,*.yml,*.yaml,*.rb,*pp
 
 au BufNewFile,BufRead *.py
     \ set autoindent |
+    \ set tabstop=4 |
+    \ set softtabstop=4 |
+    \ set shiftwidth=4 |
     \ set colorcolumn=80 |
     \ set fileformat=unix
