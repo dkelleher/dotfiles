@@ -51,7 +51,6 @@ let g:airline#extensions#tabline#enabled = 1
 set tabstop=4
 set softtabstop=4
 set shiftwidth=4
-set expandtab
 
 """""""""""""""""""""""""""""""""""""""""
 " Set line numbers and relative numbers "
