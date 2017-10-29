@@ -8,12 +8,29 @@ setopt HIST_IGNORE_DUPS # Dont record an entry that was just recorded again.
 setopt EXTENDED_HISTORY # Write the history file in the ":start:elapsed;command" format.
 setopt HIST_EXPIRE_DUPS_FIRST # Expire duplicate entries first when trimming history.
 
+
+# Setup prompt
 autoload -U colors && colors
 
 if [ $UID -eq 0 ]; then NCOLOR="red"; else NCOLOR="yellow"; fi
 
 export PS1="%{$fg[white]%}%m%{$reset_color%}::%{$fg[$NCOLOR]%}%n%{$reset_color%}::%{$fg[blue]%}%3/%{$reset_color%} >> "
 
+
+# Enable enhanced tab completion
+autoload -U compinit
+compinit
+
+zstyle ':completion:*:descriptions' format '%U%B%d%b%u'
+zstyle ':completion:*:warnings' format '%BSorry, no matches for: %d%b'
+
+
+# Enable sh generic files
 for file ($HOME/.sh.d/*.sh(N)); do
     source $file
+done
+
+# Enable zsh specific files
+for file ($HOME/.sh.d/*.zsh(N)); do
+	source $file
 done

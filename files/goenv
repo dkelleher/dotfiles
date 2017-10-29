@@ -1,0 +1,4 @@
+#!/bin/sh
+
+export GOENVPATH=$HOME/.golang
+source ~/.go-env-manager/go-env-wrapper.zsh
