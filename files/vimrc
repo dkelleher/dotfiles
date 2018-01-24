@@ -48,11 +48,10 @@ let g:airline#extensions#tabline#enabled = 1
 """"""""""""""""""""""""""
 " Set default tab length "
 """"""""""""""""""""""""""
-au BufNewFile,BufRead
-    \ set tabstop=4 |
-    \ set softtabstop=4 |
-    \ set shiftwidth=4 |
-    \ set expandtab
+set tabstop=4 |
+set softtabstop=4 |
+set shiftwidth=4 |
+set expandtab
 
 """""""""""""""""""""""""""""""""""""""""
 " Set line numbers and relative numbers "
