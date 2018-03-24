@@ -2,6 +2,6 @@
 
 export PIP_REQUIRE_VIRTUALENV=true
 export WORKON_HOME=$HOME/.virtualenvs
-source /usr/bin/virtualenvwrapper.sh
+source /usr/share/virtualenvwrapper/virtualenvwrapper.sh
 
 alias gpip="PIP_REQUIRE_VIRTUALENV='' pip"

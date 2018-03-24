@@ -8,6 +8,7 @@ setopt HIST_IGNORE_DUPS # Dont record an entry that was just recorded again.
 setopt EXTENDED_HISTORY # Write the history file in the ":start:elapsed;command" format.
 setopt HIST_EXPIRE_DUPS_FIRST # Expire duplicate entries first when trimming history.
 
+bindkey '^R' history-incremental-search-backward
 
 # Setup prompt
 autoload -U colors && colors

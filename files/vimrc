@@ -80,7 +80,7 @@ au BufNewFile,BufRead *.rst,*.md
     \ set textwidth=72 |
     \ setlocal spell
 
-au BufNewFile,BufRead *.html,*.js,*.yml,*.yaml,*.rb,*pp,*.json
+au BufNewFile,BufRead *.html,*.js,*.yml,*.yaml,*.rb,*pp,*.json,*.sls
     \ set tabstop=2 |
     \ set softtabstop=2 |
     \ set shiftwidth=2 |
