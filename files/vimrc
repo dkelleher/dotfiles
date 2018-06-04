@@ -14,8 +14,6 @@ Plugin 'ayu-theme/ayu-vim'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'ntpeters/vim-better-whitespace'
-Plugin 'kchmck/vim-coffee-script'
-Plugin 'ajf/puppet-vim'
 
 call vundle#end()
 

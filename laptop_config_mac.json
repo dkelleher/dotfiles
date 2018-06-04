@@ -11,7 +11,6 @@
         "files/vimrc": "~/.vimrc",
         "files/tmux.conf": "~/.tmux.conf",
         "files/gitconfig": "~/.gitconfig",
-        "files/iterm2_profiles.json": "~/Library/Application Support/iTerm2/DynamicProfiles/iterm2_profiles.json"
     },
 
     "commands": [
