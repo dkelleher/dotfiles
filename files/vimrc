@@ -14,6 +14,7 @@ Plugin 'ayu-theme/ayu-vim'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'ntpeters/vim-better-whitespace'
+Plugin 'hashivim/vim-terraform'
 
 call vundle#end()
 

@@ -10,7 +10,7 @@
         "files/venv": "~/.sh.d/venv.sh",
         "files/vimrc": "~/.vimrc",
         "files/tmux.conf": "~/.tmux.conf",
-        "files/gitconfig": "~/.gitconfig",
+        "files/gitconfig": "~/.gitconfig"
     },
 
     "commands": [
